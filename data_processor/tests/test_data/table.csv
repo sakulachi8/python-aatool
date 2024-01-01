@@ -1,0 +1,32 @@
+name,ticker,quantity,category
+test,ADH,2352,Australian Equities
+test,BID,234324,Australian Equities
+test,CSL,23424,Australian Equities
+test,QRI,7345,Australian Equities
+test,RHC,23234,Australian Equities
+test,SQ2,8485,Australian Equities
+test,STO,33324,Australian Equities
+test,SVW,234,Australian Equities
+test,WHT3810AU,23234,Australian Equities
+test,AU000000ANZ3,23424,Australian Equities
+test,88579Y101,45638,International Developed Equities
+test,AMZN.NSM,456466,International Developed Equities
+test,BABA.NYS,5646,International Developed Equities
+test,CRM.NYS,45,International Developed Equities
+test,EVR.LSE,337.98,International Developed Equities
+test,NET.NYS,5182.18,International Developed Equities
+test,SHOP.NYS,456464,International Developed Equities
+test,TDOC.NYS,3774.84,International Developed Equities
+test,VMID.LSE,14855.09,International Developed Equities
+test,ZS.NSM,3435,International Developed Equities
+test,MAQ5143AU,4545,Alternative Growth
+test,037833DV9,1000,Alternative Defensive
+test,BENPH,4554,Alternative Defensive
+test,+WINGA03RG,6784,Alternative Growth
+test,+WINGATE03,4545,Alternative Growth
+test,ETL0201AU,16394.49,International Emerging Equities
+test,IOF0203AU,3435,International Emerging Equities
+test,+ANZCMA,232359,Cash & Equivalents
+test,+GBPCASH,33521,Cash & Equivalents
+test,+USDCASH,14567,Cash & Equivalents
+test,AN3PK,100,Alternative Defensive

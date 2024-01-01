@@ -1,0 +1,14 @@
+.control-overflow{
+    overflow: auto;
+}
+
+@media (max-width: 991.98px) {
+    #sidebar-hidden {
+        display: none;
+    }
+} 
+@media (min-width: 991.98px) {
+    #mobilebar-hidden{
+        display: none;
+    }
+} 
