@@ -1,6 +1,6 @@
 
-DATASTREAM_USERNAME = 'ZGVD004'
-DATASTREAM_PASSWORD = 'CHINA160'
+DATASTREAM_USERNAME = ''
+DATASTREAM_PASSWORD = ''
 
 import os, time, logging
 from enum import Enum
@@ -13,65 +13,6 @@ import DatastreamDSWS as dsws
 from stdnum import isin
 
 from tenacity import retry, retry_if_exception_type, stop_after_attempt, wait_fixed
-# Uncomment for live
-# DATASTREAM_USERNAME = os.environ.get('DATASTREAM_USERNAME')
-# DATASTREAM_PASSWORD = os.environ.get('DATASTREAM_PASSWORD')
-
-
-# class RefinitivID(Enum):
-#     RIC = symbol_conversion.SymbolTypes.RIC
-#     ISIN = symbol_conversion.SymbolTypes.ISIN
-#     CUSIP = symbol_conversion.SymbolTypes.CUSIP
-#     SEDOL = symbol_conversion.SymbolTypes.SEDOL
-#     TICKER_SYMBOL = symbol_conversion.SymbolTypes.TICKER_SYMBOL
-#     OA_PERM_ID = symbol_conversion.SymbolTypes.OA_PERM_ID
-#     LIPPER_ID = symbol_conversion.SymbolTypes.LIPPER_ID
-#     _ALL_UNIQUE = "_AllUnique"
-
-# def convert_to(from_symbols: list, from_type: RefinitivID, to_type: RefinitivID, type_= 'RIC'):
-#     rd.open_session()
-#     from_symbols = [str(x) for x in from_symbols if x is not None]
-#     if to_type == RefinitivID._ALL_UNIQUE: raise ValueError("Cannot convert to _ALL_UNIQUE")
-#     response_rics = []
-#     response_metadata = {}
-#     batch_size = 500
-#     try:
-#         for i in range(0, len(from_symbols), batch_size):
-#             batch_from_symbols = from_symbols[i:i + batch_size]
-#             ric_list, metadata = convert_batch(batch_from_symbols, from_type, to_type, type_)
-#             response_rics.extend(ric_list)
-#             response_metadata.update(metadata)
-#             time.sleep(0.05)
-#     except Exception as e:
-#         logging.error(f"Error during conversion: {e}")
-#     finally:
-#         rd.close_session()
-#     return response_rics, response_metadata
-
-# @retry(stop=stop_after_attempt(3), wait=wait_fixed(100))
-# def convert_batch(batch_from_symbols: list, from_type: RefinitivID, to_type: RefinitivID, type_= 'RIC'):
-#     try:
-#         conversion_response = symbol_conversion.Definition(
-#             symbols=batch_from_symbols,
-#             from_symbol_type=from_type.value,
-#             to_symbol_types=to_type.value.value,
-#         ).get_data()
-#     except Exception as e:
-#         if 'ConnectError' in str(e):
-#             logging.error(f"Refinitiv Not Open: {e}")
-#             print(f"Refinitiv Not Open.. sleeping..")
-#             raise
-#         else:
-#             logging.error(f"Error during conversion: {e}")
-#             print(f"Error during conversion: {e}")
-#             return []
-#     if conversion_response.is_success:
-#         return conversion_response.data.df[type_].to_list(), conversion_response.data.raw['Matches']
-#     else:
-#         logging.error(f"Error during conversion: {conversion_response.errors}")
-#         print(f"Error during conversion: {conversion_response.errors}")
-#         return []
-
 
 def connect_to_datastream():
     ds = dsws.Datastream(username=DATASTREAM_USERNAME, password=DATASTREAM_PASSWORD)
